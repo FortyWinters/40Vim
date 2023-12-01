@@ -1,28 +1,53 @@
 # Neovim
 
-## 安装Neo Vim
+## 安装
 ### MacOS
 ```
 brew install neovim
-```
-## 安装nvim配置
-### MacOS
-```
+
 git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
-```
-## 安装字体
-### MacOS
-```
+
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
-```
 
-## 安装ripgrep
-### MacOS
-```
 brew install ripgrep
+
+brew install go
 ```
-### Ubuntu
+## 插件
+- catppuccin       
+- comment 
+- gitsigns 
+- indent-blankline  
+- lualine-nvim  
+- lspsaga-nvim
+- mason  
+- noice  
+- nvim-cmp  
+- nvim-lspconfig  
+- nvim-tree   
+- nvim-treesitter 
+- nvim-ts-autotag  
+- nvim-web-devicons  
+- telescope 
+- transparent-nvim
+- vim-highlightedyank
+- vim-illuminate
+- whichkey
+
+## 快捷键
 ```
-sudo apt-get install ripgrep
+非插入模式
+<Ctrl>/     注释代码
+
+普通模式
+<Space>fk   查看快捷键
+<Space>fh   查看帮助 
+<Space>ff   查找文件
+<Space>fg   查找字符
+<space>fb   查找buf
+
+视觉模式
+>           代码右移
+<           代码左移
 ```

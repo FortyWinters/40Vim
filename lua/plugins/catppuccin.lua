@@ -3,7 +3,7 @@ return {
 	lazy = false,
 	priority = 999,
 	config = function()
-		vim.cmd("colorscheme catppuccin")
+		vim.cmd("colorscheme catppuccin-Mocha")
 		require("catppuccin").setup({})
 	end,
 }
