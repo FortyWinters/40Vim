@@ -36,7 +36,7 @@ local config = function()
 		},
 	})
 
-  --python
+  -- python
 	lspconfig.pyright.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
@@ -52,6 +52,10 @@ local config = function()
 			},
 		},
 	})
+
+  -- golang
+
+  -- rust
 
   local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")

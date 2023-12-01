@@ -13,7 +13,8 @@ git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
 ## 安装字体
 ### MacOS
 ```
-Mononoki Nerd Font
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code-nerd-font
 ```
 
 ## 安装ripgrep
