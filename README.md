@@ -15,13 +15,14 @@ brew install ripgrep
 brew install go
 ```
 ## 插件
-- catppuccin       
-- comment 
+- catppuccin
+- comment
 - gitsigns 
 - indent-blankline  
 - lualine-nvim  
 - lspsaga-nvim
 - mason  
+- markdown-preview https://github.com/iamcco/markdown-preview.nvim
 - noice  
 - nvim-cmp  
 - nvim-lspconfig  
