@@ -54,19 +54,47 @@ local config = function()
 	})
 
   -- golang
+  lspconfig.gopls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = {
+      gopls = {
+        completeUnimported = true,
+        usePlaceholders = true,
+        analyses = {
+          unusedparams = true,
+        },
+      },
+    },
+  })
 
   -- rust
+  lspconfig.rust_analyzer.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = {"rust"},
+    settings = {
+      ['rust-analyzer'] = {
+        cargo = {
+          allFeatures = true,
+        },
+      },
+    },
+  })
 
   local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
   local flake8 = require("efmls-configs.linters.flake8")
 	local black = require("efmls-configs.formatters.black")
+  local golangci_lint = require("efmls-configs.linters.golangci_lint")
+  local goimports = require("efmls-configs.formatters.goimports")
 
   --configure efm server
   lspconfig.efm.setup({
     filetypes = {
       "lua",
       "python",
+      "go",
     },
     init_options = {
       documentFormatting = true,
@@ -78,8 +106,9 @@ local config = function()
     },
     settings = {
       languages= {
-        lus = { luacheck, stylua },
-        python = { flake8, black }
+        lua = { luacheck, stylua },
+        python = { flake8, black },
+        go = { goimports, golangci_lint },
       },
     },
   })
@@ -90,8 +119,8 @@ return {
   config = config,
   lazy = false,
   dependencies = {
-  	"windwp/nvim-autopairs",
-		"williamboman/mason.nvim",
+    "windwp/nvim-autopairs",
+    "williamboman/mason.nvim",
 		"creativenull/efmls-configs-nvim",
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-buffer",
