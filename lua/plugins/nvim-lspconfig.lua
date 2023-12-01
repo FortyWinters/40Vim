@@ -1,9 +1,11 @@
 local on_attach = require("util.lsp").on_attach
 
 local config = function()
-	require("neoconf").setup({})
+  require("neoconf").setup({})
+  local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
   local lspconfig = require("lspconfig")
+
   local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 
   for type, icon in pairs(signs) do
@@ -11,31 +13,12 @@ local config = function()
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 	end
 
-  -- enable keybinds only for when lsp server available
-  local on_attach = function(clinet, bufnr)
-    --keybind options
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-
-    -- set keybinds
-    vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
-    vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf declaration()<CR>", opts) -- got to declaration
-    vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in w
-    vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-    vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
-    vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
-    vim.keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostic<CR>", opts) --show diagnostics for
-    vim.keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostic<CR>", opts) -- show diagnostics for
-    vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to pre diagnostics
-    vim.keymap.set("n", "<leader>nd", "<cmd>Lassaga diagnostic_jump_next<CR>", opts) -- jump to next diagnosatics
-    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cur
-    vim.keymap.set("n", "<leader>lo", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
-  end
-
+  local capabilities = cmp_nvim_lsp.default_capabilities()
 
   -- lua
 	lspconfig.lua_ls.setup({
-		-- capabilities = capabilities,
-		-- on_attach = on_attach,
+		capabilities = capabilities,
+		on_attach = on_attach,
 		settings = { -- custom settings for lua
 			Lua = {
 				-- make the language server recognize "vim" global
@@ -55,7 +38,7 @@ local config = function()
 
   --python
 	lspconfig.pyright.setup({
-		-- capabilities = capabilities,
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = {
 			pyright = {
@@ -96,30 +79,18 @@ local config = function()
       },
     },
   })
-
-  -- Format on Save
-  local lsp_fmt_group = vim.api.nvim_create_augroup("LspFormattingGroup", {})
-  vim.api.nvim_create_autocmd("BufWritePost", {
-    group = lsp_fmt_group,
-    callback = function()
-      local efm = vim.lsp.get_active_clients({ name = "efm" })
-
-      if vim.tbl_isempty(efm) then
-        return
-      end
-
-      vim.lsp.buf.format({ name = "efm" })
-    end,
-  })
 end
 
 return {
-  "neovm/nvim-lspconfig",
+  "neovim/nvim-lspconfig",
   config = config,
   lazy = false,
   dependencies = {
-		"windwp/nvim-autopairs",
+  	"windwp/nvim-autopairs",
 		"williamboman/mason.nvim",
 		"creativenull/efmls-configs-nvim",
-	},
+		"hrsh7th/nvim-cmp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-nvim-lsp",
+  },
 }
