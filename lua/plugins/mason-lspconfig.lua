@@ -8,7 +8,7 @@ local opts = {
     "bashls",
     "dockerls",
     "clangd",
-		"rust-analyzer",
+		"rust_analyzer",
 	},
 	automatic_installation = true,
 }
