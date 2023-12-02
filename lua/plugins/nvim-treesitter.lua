@@ -27,6 +27,8 @@ local config = function()
 			"gitignore",
 			"python",
 			"vue",
+      "rust",
+      "go",
 		},
 		auto_install = true,
 		highlight = {
