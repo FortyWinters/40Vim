@@ -1,41 +1,50 @@
 # Neovim
 
 ## 安装
-### MacOS
-```
-brew install neovim
 
+### MacOS
+
+```
 git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
 
+brew install neovim
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
-
 brew install ripgrep
-
 brew install go
 ```
+
+### Ubuntu
+
+```
+git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
+sh ~/.config/nvim/script/install_ubuntu.sh
+```
+
 ## 插件
-- catppuccin https://github.com/catppuccin/nvim
-- comment https://github.com/numToStr/Comment.nvim
-- gitsigns https://github.com/lewis6991/gitsigns.nvim 
-- indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim  
-- lualine-nvim https://github.com/nvim-lualine/lualine.nvim 
-- lspsaga-nvim https://github.com/nvimdev/lspsaga.nvim
-- mason https://github.com/williamboman/mason.nvim  
-- markdown-preview https://github.com/iamcco/markdown-preview.nvim
-- noice https://github.com/folke/noice.nvim
-- nvim-cmp https://github.com/hrsh7th/nvim-cmp
-- nvim-tree https://github.com/nvim-tree/nvim-tree.lua 
-- nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
-- nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
-- nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
-- telescope https://github.com/nvim-telescope/telescope.nvim
-- transparent-nvim https://github.com/xiyaowong/transparent.nvim
-- vim-highlightedyank https://github.com/machakann/vim-highlightedyank
-- vim-illuminate https://github.com/RRethy/vim-illuminate
-- which-key https://github.com/folke/which-key.nvim
+
+-   catppuccin https://github.com/catppuccin/nvim
+-   comment https://github.com/numToStr/Comment.nvim
+-   gitsigns https://github.com/lewis6991/gitsigns.nvim
+-   indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim
+-   lualine-nvim https://github.com/nvim-lualine/lualine.nvim
+-   lspsaga-nvim https://github.com/nvimdev/lspsaga.nvim
+-   mason https://github.com/williamboman/mason.nvim
+-   markdown-preview https://github.com/iamcco/markdown-preview.nvim
+-   noice https://github.com/folke/noice.nvim
+-   nvim-cmp https://github.com/hrsh7th/nvim-cmp
+-   nvim-tree https://github.com/nvim-tree/nvim-tree.lua
+-   nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
+-   nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
+-   nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
+-   telescope https://github.com/nvim-telescope/telescope.nvim
+-   transparent-nvim https://github.com/xiyaowong/transparent.nvim
+-   vim-highlightedyank https://github.com/machakann/vim-highlightedyank
+-   vim-illuminate https://github.com/RRethy/vim-illuminate
+-   which-key https://github.com/folke/which-key.nvim
 
 ## 快捷键
+
 ```
 非插入模式
 <Space>/    注释代码
@@ -43,7 +52,7 @@ brew install go
 
 普通模式
 <Space>fk   查看快捷键
-<Space>fh   查看帮助 
+<Space>fh   查看帮助
 <Space>ff   查找文件
 <Space>fg   查找字符
 <Space>fb   查找buf
