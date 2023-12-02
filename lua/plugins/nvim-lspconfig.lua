@@ -36,6 +36,36 @@ local config = function()
 		},
 	})
 
+  -- json
+  lspconfig.jsonls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "json", "jsonc" },
+  })
+
+  -- bash
+  lspconfig.bashls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "sh", "aliasrc" },
+  })
+
+  -- docker
+  lspconfig.dockerls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
+  -- C/C++
+  lspconfig.clangd.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    cmd = {
+      "clangd",
+      "--offset-encoding=utf-16",
+    },
+  })
+
   -- python
 	lspconfig.pyright.setup({
 		capabilities = capabilities,
@@ -88,11 +118,26 @@ local config = function()
 	local black = require("efmls-configs.formatters.black")
   local golangci_lint = require("efmls-configs.linters.golangci_lint")
   local goimports = require("efmls-configs.formatters.goimports")
+  local eslint_d = require("efmls-configs.linters.eslint_d")
+  local prettier_d = require("efmls-configs.formatters.prettier_d")
+  local fixjson = require("efmls-configs.formatters.fixjson")
+  local shellcheck = require("efmls-configs.linters.shellcheck")
+  local shfmt = require("efmls-configs.formatters.shfmt")
+  local hadolint = require("efmls-configs.linters.hadolint")
+  local cpplint = require("efmls-configs.linters.cpplint")
+  local clangformat = require("efmls-configs.formatters.clang_format")
 
   --configure efm server
   lspconfig.efm.setup({
     filetypes = {
       "lua",
+      "json",
+      "jsonc",
+      "sh",
+      "markdown",
+      "docker",
+      "c",
+      "cpp",
       "python",
       "go",
     },
@@ -107,6 +152,13 @@ local config = function()
     settings = {
       languages= {
         lua = { luacheck, stylua },
+        json = { eslint_d, prettier_d },
+        jsonc = { eslint_d, fixjson },
+        sh = { shellcheck, shfmt },
+        markdown = { prettier_d },
+        docker = { hadolint, prettier_d },
+        c = { clangformat, cpplint },
+        cpp = { clangformat, cpplint },
         python = { flake8, black },
         go = { goimports, golangci_lint },
       },
