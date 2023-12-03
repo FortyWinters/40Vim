@@ -9,3 +9,5 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.z
 unzip FiraCode.zip -d ~/.fonts
 fc-cache -fv
 echo "done!"
+
+rm ~/.config/nvim/plugins/alphy.lua
