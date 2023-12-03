@@ -1,6 +1,6 @@
-#/bin/bash
+#!/bin/bash
 echo "[-] Download neovim [-]"
-apt-get install -y neovim
+sudo apt-get install -y neovim
 echo "done!"
 
 echo "[-] Download fonts [-]"
