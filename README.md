@@ -16,13 +16,6 @@ brew install jesseduffield/lazygit/lazygit
 // brew install go
 ```
 
-### Ubuntu
-
-```
-git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
-sh ~/.config/nvim/script/install_ubuntu.sh
-```
-
 ## 插件
 
 -   alpha-nvim https://github.com/goolord/alpha-nvim
