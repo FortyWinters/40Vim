@@ -3,8 +3,8 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Directory Navigation
-keymap.set("n", "<leader>m", ":NvimTreeFocus", opts)
-keymap.set("n", "<leader>e", ":NvimTreeToggle", opts)
+-- keymap.set("n", "<leader>m", ":NvimTreeFocus", opts)
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Pane Navigation
 keymap.set("n", "<leader>h", "<C-w>h", opts) -- Navigate Left
@@ -25,5 +25,8 @@ vim.api.nvim_set_keymap("n", "<leader>/", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<leader>/", "gcc", { noremap = false })
 
 -- Treminal
-keymap.set("n", "<leader>t", ":ToggleTerm", opts)
+keymap.set("n", "<leader>t", ":ToggleTerm<CR>", opts)
 keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+
+-- LazyGit
+keymap.set("n", "<leader>g", ":LazyGit<CR>", opts)

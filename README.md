@@ -10,8 +10,10 @@ git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
 brew install neovim
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
-brew install ripgrep
-brew install go
+brew install jesseduffield/lazygit/lazygit
+
+// brew install ripgrep
+// brew install go
 ```
 
 ### Ubuntu
@@ -22,27 +24,29 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 ```
 
 ## 插件
-- alpha-nvim https://github.com/goolord/alpha-nvim
-- catppuccin https://github.com/catppuccin/nvim
-- comment https://github.com/numToStr/Comment.nvim
-- gitsigns https://github.com/lewis6991/gitsigns.nvim
-- indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim
-- lualine-nvim https://github.com/nvim-lualine/lualine.nvim
-- lspsaga-nvim https://github.com/nvimdev/lspsaga.nvim
-- mason https://github.com/williamboman/mason.nvim
-- markdown-preview https://github.com/iamcco/markdown-preview.nvim
-- noice https://github.com/folke/noice.nvim
-- nvim-cmp https://github.com/hrsh7th/nvim-cmp
-- nvim-tree https://github.com/nvim-tree/nvim-tree.lua
-- nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
-- nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
-- nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
-- telescope https://github.com/nvim-telescope/telescope.nvim
-- transparent-nvim https://github.com/xiyaowong/transparent.nvim
-- toggleterm https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file
-- vim-highlightedyank https://github.com/machakann/vim-highlightedyank
-- vim-illuminate https://github.com/RRethy/vim-illuminate
-- which-key https://github.com/folke/which-key.nvim
+
+-   alpha-nvim https://github.com/goolord/alpha-nvim
+-   catppuccin https://github.com/catppuccin/nvim
+-   comment https://github.com/numToStr/Comment.nvim
+-   gitsigns https://github.com/lewis6991/gitsigns.nvim
+-   indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim
+-   lazygit https://github.com/kdheepak/lazygit.nvim
+-   lualine-nvim https://github.com/nvim-lualine/lualine.nvim
+-   lspsaga-nvim https://github.com/nvimdev/lspsaga.nvim
+-   mason https://github.com/williamboman/mason.nvim
+-   markdown-preview https://github.com/iamcco/markdown-preview.nvim
+-   noice https://github.com/folke/noice.nvim
+-   nvim-cmp https://github.com/hrsh7th/nvim-cmp
+-   nvim-tree https://github.com/nvim-tree/nvim-tree.lua
+-   nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
+-   nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
+-   nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
+-   telescope https://github.com/nvim-telescope/telescope.nvim
+-   transparent-nvim https://github.com/xiyaowong/transparent.nvim
+-   toggleterm https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file
+-   vim-highlightedyank https://github.com/machakann/vim-highlightedyank
+-   vim-illuminate https://github.com/RRethy/vim-illuminate
+-   which-key https://github.com/folke/which-key.nvim
 
 ## 快捷键
 
@@ -69,6 +73,7 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 <Space>sl   右侧分屏
 <Space>sj   下方分屏
 <Space>t    打开/关闭终端
+<Space>g    打开/关闭lazygit
 
 视觉模式
 <Space>]    代码右移
