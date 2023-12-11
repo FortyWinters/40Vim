@@ -53,7 +53,6 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 ```
 非插入模式
 <Space>/    注释代码
-<Ctrl>s     快速选中
 
 普通模式
 <Space>fk   查看快捷键
@@ -80,5 +79,5 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 <Space>[    代码左移
 
 终端模式
-[Esc]       退出终端模式
+<Esc>       退出终端模式
 ```
