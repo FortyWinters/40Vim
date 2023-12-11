@@ -13,7 +13,7 @@ keymap.set("n", "<leader>k", "<C-w>k", opts) -- Navigate Up
 keymap.set("n", "<leader>l", "<C-w>l", opts) -- Navigate Right
 
 -- Window Management
-keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
+keymap.set("n", "<leader>sl", ":vsplit<CR>", opts) -- Split Vertically
 keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontally
 
 -- Indenting
