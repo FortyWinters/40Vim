@@ -39,6 +39,7 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 - nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
 - telescope https://github.com/nvim-telescope/telescope.nvim
 - transparent-nvim https://github.com/xiyaowong/transparent.nvim
+- toggleterm https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file
 - vim-highlightedyank https://github.com/machakann/vim-highlightedyank
 - vim-illuminate https://github.com/RRethy/vim-illuminate
 - which-key https://github.com/folke/which-key.nvim
@@ -65,8 +66,14 @@ sh ~/.config/nvim/script/install_ubuntu.sh
 <Space>k    导航到上方窗口
 <Space>j    导航到下方窗口
 <Space>k    展示文档
+<Space>sl   右侧分屏
+<Space>sj   下方分屏
+<Space>t    打开/关闭终端
 
 视觉模式
 <Space>]    代码右移
 <Space>[    代码左移
+
+终端模式
+[Esc]       退出终端模式
 ```

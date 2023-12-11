@@ -23,3 +23,7 @@ keymap.set("v", "<leader>]", ">gv")
 -- Comments
 vim.api.nvim_set_keymap("n", "<leader>/", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<leader>/", "gcc", { noremap = false })
+
+-- Treminal
+keymap.set("n", "<leader>t", ":ToggleTerm", opts)
+keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
