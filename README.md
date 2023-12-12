@@ -18,7 +18,6 @@ brew install jesseduffield/lazygit/lazygit
 
 ## 插件
 
--   alpha-nvim https://github.com/goolord/alpha-nvim
 -   catppuccin https://github.com/catppuccin/nvim
 -   comment https://github.com/numToStr/Comment.nvim
 -   gitsigns https://github.com/lewis6991/gitsigns.nvim
