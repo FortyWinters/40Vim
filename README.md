@@ -20,6 +20,7 @@ brew install jesseduffield/lazygit/lazygit
 
 -   catppuccin https://github.com/catppuccin/nvim
 -   comment https://github.com/numToStr/Comment.nvim
+-   flash https://github.com/folke/flash.nvim
 -   gitsigns https://github.com/lewis6991/gitsigns.nvim
 -   indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim
 -   lazygit https://github.com/kdheepak/lazygit.nvim
@@ -34,8 +35,8 @@ brew install jesseduffield/lazygit/lazygit
 -   nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
 -   nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
 -   telescope https://github.com/nvim-telescope/telescope.nvim
--   transparent-nvim https://github.com/xiyaowong/transparent.nvim
 -   toggleterm https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file
+-   transparent-nvim https://github.com/xiyaowong/transparent.nvim
 -   vim-highlightedyank https://github.com/machakann/vim-highlightedyank
 -   vim-illuminate https://github.com/RRethy/vim-illuminate
 -   which-key https://github.com/folke/which-key.nvim
@@ -45,6 +46,7 @@ brew install jesseduffield/lazygit/lazygit
 ```
 非插入模式
 <Space>/    注释代码
+s           查找
 
 普通模式
 <Space>fk   查看快捷键
