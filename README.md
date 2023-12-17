@@ -4,16 +4,20 @@
 
 ### MacOS
 
-```
-git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
+安装
 
+```
 brew install neovim
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font
 brew install jesseduffield/lazygit/lazygit
 
-// brew install ripgrep
-// brew install go
+git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
+```
+
+字体
+
+```
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code-nerd-font
 ```
 
 ## 插件
@@ -50,31 +54,35 @@ brew install jesseduffield/lazygit/lazygit
 s           查找
 
 普通模式
-<Space>fk   查看快捷键
-<Space>fh   查看帮助
-<Space>ff   查找文件
-<Space>fg   查找字符
-<Space>fb   查找buf
-<Space>b    跳转到函数定义
-<Space>dn   跳到下一个诊断
-<Space>dp   跳到上一个诊断
-<Space>e    打开/关闭文件树
-<Space>h    导航到左侧窗口
-<Space>l    导航到右侧窗口
-<Space>k    导航到上方窗口
-<Space>j    导航到下方窗口
-<Space>k    展示文档
-<Space>sl   右侧分屏
-<Space>sj   下方分屏
-<Space>t    打开/关闭终端
-<Space>1    打开tab选择
+<space>fk   查看快捷键
+<space>fh   查看帮助
+<space>ff   查找文件
+<space>fg   查找字符
+<space>fb   查找buf
+
+<space>sl   右侧分屏
+<space>sj   下方分屏
+
+<space>dn   跳到下一个诊断
+<space>dp   跳到上一个诊断
+
+<space>h    导航到左侧窗口
+<space>l    导航到右侧窗口
+<space>k    导航到上方窗口
+<space>j    导航到下方窗口
+<space>k    展示文档
+<space>b    跳转到函数定义
+
+<space>e    打开/关闭文件树
+<space>t    打开/关闭终端
+<space>1    打开tab选择
 
 视觉模式
-<Space>]    代码右移
-<Space>[    代码左移
+<space>]    代码右移
+<space>[    代码左移
 
 终端模式
-<Esc>       退出终端模式
+<esc>       退出终端模式
 
 常用指令
 :Lazy               插件管理
