@@ -1,5 +1,4 @@
 local keymap = vim.keymap
-
 local opts = { noremap = true, silent = true }
 
 -- Directory Navigation
@@ -14,7 +13,7 @@ keymap.set("n", "<leader>l", "<C-w>l", opts) -- Navigate Right
 
 -- Window Management
 keymap.set("n", "<leader>sl", ":vsplit<CR>", opts) -- Split Vertically
-keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontally
+keymap.set("n", "<leader>sj", ":split<CR>", opts) -- Split Horizontally
 
 -- Indenting
 keymap.set("v", "<leader>[", "<gv")
@@ -28,5 +27,12 @@ vim.api.nvim_set_keymap("v", "<leader>/", "gcc", { noremap = false })
 keymap.set("n", "<leader>t", ":ToggleTerm<CR>", opts)
 keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 
--- LazyGit
-keymap.set("n", "<leader>g", ":LazyGit<CR>", opts)
+-- TabPage
+-- Move to previous/next
+keymap.set("n", "<leader>,", ":BufferPrevious<CR>", opts)
+keymap.set("n", "<leader>.", ":BufferNext<CR>", opts)
+-- Re-order to previous/next
+keymap.set("n", "<leader><", ":BufferMovePrevious<CR>", opts)
+keymap.set("n", "<leader>>", ":BufferMoveNext<CR>", opts)
+-- Goto buffer in position
+keymap.set("n", "<leader>1", ":BufferPick<CR>", opts)

@@ -18,6 +18,7 @@ brew install jesseduffield/lazygit/lazygit
 
 ## 插件
 
+-   barbar https://github.com/romgrk/barbar.nvim
 -   catppuccin https://github.com/catppuccin/nvim
 -   comment https://github.com/numToStr/Comment.nvim
 -   flash https://github.com/folke/flash.nvim
@@ -66,7 +67,7 @@ s           查找
 <Space>sl   右侧分屏
 <Space>sj   下方分屏
 <Space>t    打开/关闭终端
-<Space>g    打开/关闭lazygit
+<Space>1    打开tab选择
 
 视觉模式
 <Space>]    代码右移
@@ -74,4 +75,10 @@ s           查找
 
 终端模式
 <Esc>       退出终端模式
+
+常用指令
+:Lazy               插件管理
+:LazyGit            git
+:Mason              LSP管理
+:MarkdownPreview    Markdown预览
 ```
