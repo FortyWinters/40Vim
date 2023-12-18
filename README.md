@@ -60,18 +60,18 @@ s           查找
 <space>fg   查找字符
 <space>fb   查找buf
 
-<space>sl   右侧分屏
-<space>sj   下方分屏
+<space>s<right> 右侧分屏
+<space>s<down>  下方分屏
 
 <space>dn   跳到下一个诊断
 <space>dp   跳到上一个诊断
 
-<space>h    导航到左侧窗口
-<space>l    导航到右侧窗口
-<space>k    导航到上方窗口
-<space>j    导航到下方窗口
-<space>k    展示文档
-<space>b    跳转到函数定义
+<space><left>   导航到左侧窗口
+<space><right>  导航到右侧窗口
+<space><up>     导航到上方窗口
+<space><down>   导航到下方窗口
+<space>k        展示文档
+<space>b        跳转到函数定义
 
 <space>e    打开/关闭文件树
 <space>t    打开/关闭终端

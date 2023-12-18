@@ -6,14 +6,14 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Pane Navigation
-keymap.set("n", "<leader>h", "<C-w>h", opts) -- Navigate Left
-keymap.set("n", "<leader>j", "<C-w>j", opts) -- Navigate Down
-keymap.set("n", "<leader>k", "<C-w>k", opts) -- Navigate Up
-keymap.set("n", "<leader>l", "<C-w>l", opts) -- Navigate Right
+keymap.set("n", "<leader><Left>", "<C-w>h", opts) -- Navigate Left
+keymap.set("n", "<leader><Down>", "<C-w>j", opts) -- Navigate Down
+keymap.set("n", "<leader><Up>", "<C-w>k", opts) -- Navigate Up
+keymap.set("n", "<leader><Right>", "<C-w>l", opts) -- Navigate Right
 
 -- Window Management
-keymap.set("n", "<leader>sl", ":vsplit<CR>", opts) -- Split Vertically
-keymap.set("n", "<leader>sj", ":split<CR>", opts) -- Split Horizontally
+keymap.set("n", "<leader>s<Right>", ":vsplit<CR>", opts) -- Split Vertically
+keymap.set("n", "<leader>s<Down>", ":split<CR>", opts) -- Split Horizontally
 
 -- Indenting
 keymap.set("v", "<leader>[", "<gv")
