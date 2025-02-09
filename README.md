@@ -58,9 +58,9 @@ brew install --cask font-fira-code-nerd-font
 | \<space\>ff         | 查询文件        |
 | \<space\>fb         | 查询buffer      |
 | \<space\>fg         | 查询内容        |
-| \<ctrl\>j           | 下一个补全项    |
-| \<ctrl\>k           | 上一个补全项    |
-| \<ctrl\>e           | 关闭补全项      |
+| \<command\>j           | 下一个补全项    |
+| \<command\>k           | 上一个补全项    |
+| \<command\>e           | 关闭补全项      |
 | \<space\>           | 确认补全项      |
 | \<space\>dj         | 下一个诊断      |
 | \<space\>dk         | 上一个诊断      |
