@@ -55,8 +55,9 @@ brew install --cask font-fira-code-nerd-font
 | \<space\>r          | 聚焦文件树      |
 | \<space\>\<tab\>    | 标签跳转        |
 | \<space\>w          | 关闭标签        |
-| \<space\>ff         | 按文件名查询    |
-| \<space\>fg         | 按文件内容查询  |
+| \<space\>ff         | 查询文件        |
+| \<space\>fb         | 查询buffer      |
+| \<space\>fg         | 按内容          |
 | \<ctrl\>j           | 下一个补全项    |
 | \<ctrl\>k           | 上一个补全项    |
 | \<ctrl\>e           | 关闭补全项      |
@@ -75,4 +76,3 @@ brew install --cask font-fira-code-nerd-font
 | \<space\>b          | 跳转到函数      |
 | \<space\>g          | 打开lazygit     |
 | s                   | 搜索            |
-
