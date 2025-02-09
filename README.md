@@ -1,8 +1,6 @@
-# Neovim
+# 40Vim
 
-## 安装
-
-### MacOS
+## MacOS
 
 安装
 
@@ -10,7 +8,8 @@
 brew install neovim
 brew install jesseduffield/lazygit/lazygit
 
-git clone https://github.com/FortyWinters/Neovim.git ~/.config/nvim
+git clone https://github.com/FortyWinters/40Vim.git ~/.config/nvim
+nvim
 ```
 
 字体
@@ -22,6 +21,7 @@ brew install --cask font-fira-code-nerd-font
 
 ## 插件
 
+-   alpha-nvim https://github.com/goolord/alpha-nvim.git
 -   barbar https://github.com/romgrk/barbar.nvim
 -   catppuccin https://github.com/catppuccin/nvim
 -   comment https://github.com/numToStr/Comment.nvim
@@ -29,18 +29,18 @@ brew install --cask font-fira-code-nerd-font
 -   gitsigns https://github.com/lewis6991/gitsigns.nvim
 -   indent-blankline https://github.com/lukas-reineke/indent-blankline.nvim
 -   lazygit https://github.com/kdheepak/lazygit.nvim
--   lualine-nvim https://github.com/nvim-lualine/lualine.nvim
--   lspsaga-nvim https://github.com/nvimdev/lspsaga.nvim
+-   lspsaga https://github.com/nvimdev/lspsaga.nvim
+-   lualine https://github.com/nvim-lualine/lualine.nvim
+-   mason-lspconfig https://github.com/williamboman/mason-lspconfig.nvim
 -   mason https://github.com/williamboman/mason.nvim
--   markdown-preview https://github.com/iamcco/markdown-preview.nvim
+-   neoconf https://github.com/folke/neoconf.nvim
 -   noice https://github.com/folke/noice.nvim
 -   nvim-cmp https://github.com/hrsh7th/nvim-cmp
+-   nvim-lspconfig https://github.com/neovim/nvim-lspconfig
 -   nvim-tree https://github.com/nvim-tree/nvim-tree.lua
 -   nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
 -   nvim-ts-autotag https://github.com/windwp/nvim-ts-autotag
--   nvim-web-devicons https://github.com/nvim-tree/nvim-web-devicons
 -   telescope https://github.com/nvim-telescope/telescope.nvim
--   toggleterm https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file
 -   transparent-nvim https://github.com/xiyaowong/transparent.nvim
 -   vim-highlightedyank https://github.com/machakann/vim-highlightedyank
 -   vim-illuminate https://github.com/RRethy/vim-illuminate
@@ -48,45 +48,30 @@ brew install --cask font-fira-code-nerd-font
 
 ## 快捷键
 
-```
-非插入模式
-<Space>/    注释代码
-s           查找
-
-普通模式
-<space>fk   查看快捷键
-<space>fh   查看帮助
-<space>ff   查找文件
-<space>fg   查找字符
-<space>fb   查找buf
-
-<space>s<right> 右侧分屏
-<space>s<down>  下方分屏
-
-<space>dn   跳到下一个诊断
-<space>dp   跳到上一个诊断
-
-<space><left>   导航到左侧窗口
-<space><right>  导航到右侧窗口
-<space><up>     导航到上方窗口
-<space><down>   导航到下方窗口
-<space>k        展示文档
-<space>b        跳转到函数定义
-
-<space>e    打开/关闭文件树
-<space>t    打开/关闭终端
-<space>1    打开tab选择
-
-视觉模式
-<space>]    代码右移
-<space>[    代码左移
-
-终端模式
-<esc>       退出终端模式
-
-常用指令
-:Lazy               插件管理
-:LazyGit            git
-:Mason              LSP管理
-:MarkdownPreview    Markdown预览
-```
+| 快捷键 | 用途 |
+| :---- | :-- |
+| <space> | 显示快捷键 |
+| <space>e | 打开文件树 |
+| <space>r | 聚焦文件树 |
+| <space><tab> | 标签跳转 |
+| <space>w | 关闭标签 |
+| <space>ff | 按文件名查询 |
+| <space>fg | 按文件内容查询 |
+| <ctrl>j | 下一个补全项 |
+| <ctrl>k | 上一个补全项 |
+| <ctrl>e | 关闭补全项 |
+| <space> | 确认补全项 |
+| <space>dj | 下一个诊断 |
+| <space>dk | 上一个诊断 |
+| <space>/ | 注释 |
+| <space>h | 跳转到dashboard |
+| <space>s<right> | 向右分屏 |
+| <sapce>s<down> | 向下分屏 |
+| <space><up> | 向上切换窗口 |
+| <space><donw> | 向下切换窗口 |
+| <space><left> | 向左切换窗口 |
+| <space><right> | 向右切换窗口 |
+| <space>k | 展示函数文档 |
+| <space>b | 跳转到函数 |
+| <space>g | 打开lazygit |
+| s | 搜索 |

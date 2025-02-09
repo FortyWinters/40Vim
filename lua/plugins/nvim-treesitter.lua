@@ -27,8 +27,8 @@ local config = function()
 			"gitignore",
 			"python",
 			"vue",
-      "rust",
-      "go",
+			"rust",
+			"go",
 		},
 		auto_install = true,
 		highlight = {
@@ -49,6 +49,5 @@ end
 
 return {
 	"nvim-treesitter/nvim-treesitter",
-	lazy = false,
 	config = config,
 }
